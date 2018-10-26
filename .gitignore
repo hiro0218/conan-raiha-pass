@@ -1,12 +1,21 @@
-bower_components
+.DS_Store
 node_modules
-npm-debug.log
-yarn-error.log
-/.cache-loader
-*.DS_Store
-._*
-Thumbs.db
+/dist
 
-.idea/
-.vscode/
-.vs/
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
