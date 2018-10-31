@@ -20,11 +20,12 @@ export default {
   components: {
     TheHeader,
     TimeLine,
-    TheFooter,
+    TheFooter
   }
 };
 </script>
 
-<style>
+<style lang="scss">
+@import "@/scss/base.scss";
 @import "./assets/style.css";
 </style>
