@@ -7,19 +7,21 @@
         <blockquote v-if="article.summary" v-html="article.summary"/>
         <div class="anime-list">
           <h3>アニメ</h3>
-          <ul v-for="(animeTitle, animeKey) in article.anime" :key="animeKey">
-            <li>{{ animeTitle }}</li>
+          <ul>
+            <li v-for="(animeTitle, animeKey) in article.anime" :key="animeKey">{{ animeTitle }}</li>
           </ul>
         </div>
         <div class="comic-list">
           <h3>コミック</h3>
-          <ul v-for="(comicTitle, comicKey) in article.comic" :key="comicKey">
-            <li>{{ comicTitle }}</li>
+          <ul>
+            <li v-for="(comicTitle, comicKey) in article.comic" :key="comicKey">{{ comicTitle }}</li>
           </ul>
         </div>
         <div class="production-list">
-          <ul v-for="(production, productionKey) in article.production" :key="productionKey">
-            <li><a :href="production.url" target="_blank"><img :src="production.img"></a></li>
+          <ul>
+            <li v-for="(production, productionKey) in article.production" :key="productionKey">
+              <a :href="production.url" target="_blank"><img :src="production.img"></a>
+            </li>
           </ul>
         </div>
       </article>
