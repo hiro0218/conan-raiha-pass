@@ -2,7 +2,7 @@
   <section class="timeline-container">
     <template v-for="(timeLine, year) in timeLineData">
       <div class="heading-year" :key="year">{{ year }}</div>
-      <article v-for="(article, index) in timeLine" :key="index" class="case-data">
+      <article v-for="(article, index) in timeLine" :key="year + index" class="case-data">
         <h2>{{ article.title }}</h2>
         <blockquote v-if="article.summary" v-html="article.summary"/>
         <div class="anime-list">
