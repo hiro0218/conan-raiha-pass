@@ -46,15 +46,46 @@ export default {
 
 <style lang="scss">
 .timeline-container {
+  position: relative;
   width: 90%;
   max-width: 1170px;
   margin: 0 auto;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    height: 100%;
+    width: 0.25rem;
+    background: #d7e4ed;
+  }
+}
+
+.heading-year,
+.case-data {
+  margin-left: 3rem;
 }
 
 .heading-year {
-  margin: 1rem 0;
+  position: relative;
+  padding: 1rem 0;
   font-size: 2rem;
   font-weight: bold;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -2.9rem;
+    margin: auto;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background: #d04255;
+    box-shadow: 0 0 0 0.5rem #e9f0f5;
+  }
 }
 
 .case-data {
@@ -65,9 +96,24 @@ export default {
   box-shadow: 0 2px 0 #d7e4ed;
 
   .article-title {
+    position: relative;
     margin-bottom: 1rem;
     letter-spacing: 0.05em;
     line-height: 1.8;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -3.5rem;
+      margin: auto;
+      height: 1.25rem;
+      width: 1.25rem;
+      border-radius: 50%;
+      background: #333;
+      box-shadow: 0 0 0 0.25rem #e9f0f5;
+    }
   }
 
   blockquote {
