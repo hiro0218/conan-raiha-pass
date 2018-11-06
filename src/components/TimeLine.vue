@@ -89,11 +89,23 @@ export default {
 }
 
 .case-data {
+  position: relative;
   padding: 1rem;
   margin-bottom: 2rem;
   border-radius: 0.25rem;
   background: #fff;
   box-shadow: 0 2px 0 #d7e4ed;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 1.75rem;
+    right: 100%;
+    height: 0;
+    width: 0;
+    border: 8px solid transparent;
+    border-right: 8px solid #fff;
+  }
 
   .article-title {
     position: relative;
