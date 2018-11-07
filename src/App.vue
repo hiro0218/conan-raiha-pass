@@ -1,9 +1,5 @@
 <template>
-  <div id="app">
-    <TheHeader/>
-    <TimeLine/>
-    <TheFooter/>
-  </div>
+  <div id="app"><TheHeader /> <TimeLine /> <TheFooter /></div>
 </template>
 
 <script>
@@ -23,5 +19,4 @@ export default {
 
 <style lang="scss">
 @import "@/scss/base.scss";
-@import "./assets/style.css";
 </style>
