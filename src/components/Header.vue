@@ -21,13 +21,6 @@ header {
 }
 header h1 {
   color: #fff;
-  font-size: 32px;
   font-size: 2rem;
-}
-@media only screen and (min-width: 1170px) {
-  header h1 {
-    font-size: 40px;
-    font-size: 2.5rem;
-  }
 }
 </style>
