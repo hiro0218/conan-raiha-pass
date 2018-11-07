@@ -1,31 +1,64 @@
 <template>
   <div class="timeline-container">
-    <section v-for="(timeLine, year) in timeLineData" :key="year" class="year-container">
+    <section
+      v-for="(timeLine, year) in timeLineData"
+      :key="year"
+      class="year-container"
+    >
       <div class="heading-year">{{ year }}年</div>
-      <article v-for="(article, index) in timeLine" :key="year + index" class="case-data">
+      <article
+        v-for="(article, index) in timeLine"
+        :key="year + index"
+        class="case-data"
+      >
         <h2 class="article-title">{{ article.title }}</h2>
-        <blockquote v-if="article.summary" v-html="article.summary"/>
+        <blockquote v-if="article.summary" v-html="article.summary" />
         <div class="anime-list">
           <h3>アニメ</h3>
           <ul>
-            <li v-for="(animeTitle, animeKey) in article.anime" :key="animeKey">{{ animeTitle }}</li>
+            <li v-for="(animeTitle, animeKey) in article.anime" :key="animeKey">
+              {{ animeTitle }}
+            </li>
           </ul>
         </div>
         <div class="comic-list">
           <h3>コミック</h3>
           <ul>
-            <li v-for="(comicTitle, comicKey) in article.comic" :key="comicKey">{{ comicTitle }}</li>
+            <li v-for="(comicTitle, comicKey) in article.comic" :key="comicKey">
+              {{ comicTitle }}
+            </li>
           </ul>
         </div>
         <div class="product-list">
           <ul>
-            <li v-for="(product, productKey) in article.product" :key="productKey">
+            <li
+              v-for="(product, productKey) in article.product"
+              :key="productKey"
+            >
               <a :href="product.url" target="_blank">
-                <img :src="product.img">
+                <img :src="product.img" />
               </a>
             </li>
           </ul>
         </div>
+      </article>
+    </section>
+
+    <section class="year-container">
+      <article class="case-data">
+        <h2 class="article-title">関連</h2>
+        <ul>
+          <li>
+            <a href="https://b.0218.jp/20160217234035.html" target="_blank"
+              >[名探偵コナン] 赤井秀一の死の偽装について (緋色シリーズ)</a
+            >
+          </li>
+          <li>
+            <a href="https://b.0218.jp/20140607013751.html" target="_blank"
+              >[名探偵コナン] 赤井秀一(沖矢昴)が死んでる間にやってたこと</a
+            >
+          </li>
+        </ul>
       </article>
     </section>
   </div>
