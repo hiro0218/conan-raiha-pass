@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.3c88aef2f2ec5eae999932af9fcff596.js"
+  "precache-manifest.ecf7bca9dbc5d7fc31ecac3e2414001f.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "conan-raiha-pass"});
