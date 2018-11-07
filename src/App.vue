@@ -1,12 +1,8 @@
 <template>
   <div id="app">
-
     <TheHeader/>
-
     <TimeLine/>
-
     <TheFooter/>
-
   </div>
 </template>
 

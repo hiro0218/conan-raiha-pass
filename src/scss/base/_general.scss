@@ -11,9 +11,6 @@ body {
   background-color: #e9f0f5;
   font-family: $primary-font;
   font-size: 1rem;
-  -moz-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
@@ -61,6 +58,7 @@ figure {
 }
 
 blockquote {
+  font-size: 0.85rem;
   line-height: 1.6;
   quotes: '“' '”' '‘' '’';
 
@@ -84,4 +82,9 @@ h4,
 h5,
 h6 {
   margin: 0;
+}
+
+ul,
+ol {
+  line-height: 1.5;
 }
