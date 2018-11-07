@@ -1,7 +1,7 @@
 <template>
   <div class="timeline-container">
     <section v-for="(timeLine, year) in timeLineData" :key="year" class="year-container">
-      <div class="heading-year">{{ year }}</div>
+      <div class="heading-year">{{ year }}年</div>
       <article v-for="(article, index) in timeLine" :key="year + index" class="case-data">
         <h2 class="article-title">{{ article.title }}</h2>
         <blockquote v-if="article.summary" v-html="article.summary"/>
@@ -50,47 +50,32 @@ export default {
   width: 90%;
   max-width: 1170px;
   margin: 0 auto;
+  padding: 1rem 0;
 
   &::before {
     content: "";
     position: absolute;
     top: 0;
-    left: 1rem;
+    left: 4rem;
     height: 100%;
     width: 0.25rem;
     background: #d7e4ed;
+    z-index: -1;
   }
-}
-
-.heading-year,
-.case-data {
-  margin-left: 3rem;
 }
 
 .heading-year {
-  position: relative;
-  padding: 1rem 0;
+  margin-bottom: 1rem;
+  background-color: #e9f0f5;
+  color: #253a5b;
   font-size: 2rem;
   font-weight: bold;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -2.9rem;
-    margin: auto;
-    height: 2rem;
-    width: 2rem;
-    border-radius: 50%;
-    background: #d04255;
-    box-shadow: 0 0 0 0.5rem #e9f0f5;
-  }
 }
 
 .case-data {
   position: relative;
   padding: 1rem;
+  margin-left: 10rem;
   margin-bottom: 2rem;
   border-radius: 0.25rem;
   background: #fff;
@@ -107,25 +92,16 @@ export default {
     border-right: 8px solid #fff;
   }
 
+  h2,
+  h3 {
+    color: #253a5b;
+  }
+
   .article-title {
     position: relative;
     margin-bottom: 1rem;
     letter-spacing: 0.05em;
     line-height: 1.8;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: -3.5rem;
-      margin: auto;
-      height: 1.25rem;
-      width: 1.25rem;
-      border-radius: 50%;
-      background: #333;
-      box-shadow: 0 0 0 0.25rem #e9f0f5;
-    }
   }
 
   blockquote {
@@ -135,17 +111,23 @@ export default {
 }
 
 .product-list {
+  position: absolute;
+  right: calc(100% + 2rem);
+  top: 1rem;
+  bottom: 0;
+  margin: auto;
+  width: 8rem;
+
   ul {
     display: flex;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
     list-style: none;
   }
 
-  li {
-    & + li {
-      margin-left: 0.5rem;
-    }
+  li + li {
+    margin-top: 1rem;
   }
 
   a {
@@ -153,8 +135,8 @@ export default {
   }
 
   img {
-    height: 200px;
-    width: 130px;
+    height: 12rem;
+    width: 8rem;
   }
 }
 </style>
