@@ -9,7 +9,9 @@
     "deploy": "yarn build && gh-pages -d dist"
   },
   "dependencies": {
-    "vue": "^2.5.17"
+    "vue": "^2.5.17",
+    "vue-google-adsense": "^1.2.0",
+    "vue-script2": "^2.0.3"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.1.1",
