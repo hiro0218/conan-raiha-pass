@@ -13,6 +13,21 @@ export default {
     TheHeader,
     TimeLine,
     TheFooter
+  },
+  mounted: function() {
+    this.loadFont();
+  },
+  methods: {
+    loadFont: function() {
+      document.addEventListener("DOMContentLoaded", function() {
+        var link = document.createElement("link");
+        link.type = "text/css";
+        link.rel = "stylesheet";
+        link.href =
+          "https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&amp;subset=japanese";
+        document.head.appendChild(link);
+      });
+    }
   }
 };
 </script>
