@@ -41,7 +41,7 @@
               :key="productKey"
             >
               <a :href="product.url" target="_blank">
-                <img :src="product.img" />
+                <img class="lozad" :data-src="product.img" />
               </a>
             </li>
           </ul>
@@ -70,6 +70,7 @@
 </template>
 
 <script>
+import lozad from "lozad";
 import timeLineData from "@/data.json";
 
 export default {
@@ -78,6 +79,10 @@ export default {
     return {
       timeLineData: timeLineData
     };
+  },
+  mounted: function() {
+    const observer = lozad();
+    observer.observe();
   }
 };
 </script>
