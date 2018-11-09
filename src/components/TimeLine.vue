@@ -1,5 +1,10 @@
 <template>
   <div class="timeline-container">
+    <Adsense
+      data-ad-client="ca-pub-7651142413133023"
+      data-ad-slot="5864154990"
+    />
+
     <section
       v-for="(timeLine, year) in timeLineData"
       :key="year"
@@ -78,6 +83,10 @@ export default {
 </script>
 
 <style lang="scss">
+.adswrapper {
+  margin: 1rem 0;
+}
+
 .timeline-container {
   position: relative;
   width: 90%;

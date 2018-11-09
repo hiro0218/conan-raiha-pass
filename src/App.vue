@@ -1,12 +1,5 @@
 <template>
-  <div id="app">
-    <TheHeader />
-    <Adsense
-      data-ad-client="ca-pub-7651142413133023"
-      data-ad-slot="5864154990"
-    />
-    <TimeLine /> <TheFooter />
-  </div>
+  <div id="app"><TheHeader /> <TimeLine /> <TheFooter /></div>
 </template>
 
 <script>
