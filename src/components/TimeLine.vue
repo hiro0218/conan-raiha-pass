@@ -128,6 +128,13 @@ export default {
   background: #fff;
   box-shadow: 0 2px 0 #d7e4ed;
 
+  @media only screen and (max-width: 768px) {
+    margin-left: 0;
+    &:before {
+      display: none;
+    }
+  }
+
   &:before {
     content: "";
     position: absolute;
@@ -164,6 +171,10 @@ export default {
   bottom: 0;
   margin: auto;
   width: 8rem;
+
+  @media only screen and (max-width: 768px) {
+    position: static;
+  }
 
   ul {
     display: flex;
